@@ -21,7 +21,7 @@ struct PlayerDetailView: View {
                 .shadow(radius: 20)
                 .offset(x: 0, y: -50)
                 .padding(.bottom, -50)
-            TextView(value:  player.name, fontSize: 45, fontWeight: .bold, textColor: .blue)
+            TextView(value:  player.name, fontSize: 40, fontWeight: .bold, textColor: .blue).padding()
             
             HorizontalTextContainerView(key: "Age: ", value: String(player.age))
             HorizontalTextContainerView(key: "Weight: ", value: String(player.weight) + "lbs")

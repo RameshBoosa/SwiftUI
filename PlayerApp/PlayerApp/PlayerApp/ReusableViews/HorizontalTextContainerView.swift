@@ -13,8 +13,8 @@ struct HorizontalTextContainerView: View {
     
     var body: some View {
         HStack(alignment: .center, spacing: 10, content: {
-            TextView(value: key, fontSize: 40, fontWeight: .heavy, textColor: .black)
-            TextView(value: value, fontSize: 40, fontWeight: .light, textColor: .gray)
+            TextView(value: key, fontSize: 30, fontWeight: .heavy, textColor: .black)
+            TextView(value: value, fontSize: 30, fontWeight: .light, textColor: .gray)
             Spacer()
         }).padding(.leading, 10)
         .minimumScaleFactor(0.5)

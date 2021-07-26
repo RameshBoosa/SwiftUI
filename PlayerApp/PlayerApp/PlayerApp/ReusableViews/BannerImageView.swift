@@ -15,7 +15,7 @@ struct BannerImageView: View {
     var body: some View {
         Image(imageName).resizable()
             .frame(width: imageWidth, height: imageHeight)
-            //.scaledToFit()
+            .scaledToFit()
     }
 }
 

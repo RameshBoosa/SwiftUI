@@ -17,6 +17,8 @@
 		2F6CC0F726AC012F00A1143F /* HorizontalTextContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CC0F426AC012F00A1143F /* HorizontalTextContainerView.swift */; };
 		2F6CC0FA26AC038500A1143F /* PlayersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CC0F926AC038500A1143F /* PlayersList.swift */; };
 		2F6CC0FC26AC03C600A1143F /* TableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CC0FB26AC03C600A1143F /* TableRow.swift */; };
+		2FEC3A5826ADB49200EA9209 /* AddAndEditPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEC3A5726ADB49200EA9209 /* AddAndEditPlayerView.swift */; };
+		2FEC3A5A26ADBB5700EA9209 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEC3A5926ADBB5700EA9209 /* TitleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		2F6CC0F426AC012F00A1143F /* HorizontalTextContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalTextContainerView.swift; sourceTree = "<group>"; };
 		2F6CC0F926AC038500A1143F /* PlayersList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersList.swift; sourceTree = "<group>"; };
 		2F6CC0FB26AC03C600A1143F /* TableRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableRow.swift; sourceTree = "<group>"; };
+		2FEC3A5726ADB49200EA9209 /* AddAndEditPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAndEditPlayerView.swift; sourceTree = "<group>"; };
+		2FEC3A5926ADBB5700EA9209 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 				2F6CC0DE26AC00EA00A1143F /* PlayerAppApp.swift */,
 				2F6CC0F926AC038500A1143F /* PlayersList.swift */,
 				2F6CC0EE26AC011100A1143F /* PlayerDetailView.swift */,
+				2FEC3A5726ADB49200EA9209 /* AddAndEditPlayerView.swift */,
 				2F6CC0F826AC015800A1143F /* Models */,
 				2F6CC0F126AC012300A1143F /* ReusableViews */,
 				2F6CC0E226AC00ED00A1143F /* Assets.xcassets */,
@@ -91,6 +96,7 @@
 				2F6CC0F426AC012F00A1143F /* HorizontalTextContainerView.swift */,
 				2F6CC0F226AC012F00A1143F /* TextView.swift */,
 				2F6CC0FB26AC03C600A1143F /* TableRow.swift */,
+				2FEC3A5926ADBB5700EA9209 /* TitleView.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -177,9 +183,11 @@
 				2F6CC0F626AC012F00A1143F /* BannerImageView.swift in Sources */,
 				2F6CC0F026AC011100A1143F /* PlayerDetailView.swift in Sources */,
 				2F6CC0EF26AC011100A1143F /* Player.swift in Sources */,
+				2FEC3A5826ADB49200EA9209 /* AddAndEditPlayerView.swift in Sources */,
 				2F6CC0DF26AC00EA00A1143F /* PlayerAppApp.swift in Sources */,
 				2F6CC0FA26AC038500A1143F /* PlayersList.swift in Sources */,
 				2F6CC0F526AC012F00A1143F /* TextView.swift in Sources */,
+				2FEC3A5A26ADBB5700EA9209 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

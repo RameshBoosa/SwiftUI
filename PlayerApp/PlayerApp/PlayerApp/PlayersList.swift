@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PlayersList: View {
+            
     var body: some View {
         NavigationView {
             List {
@@ -15,8 +16,13 @@ struct PlayersList: View {
                     NavigationLink(
                         destination: AddAndEditPlayerView(),
                         label: {
-                            TextView(value: "Add Player", fontSize: 25, fontWeight: .heavy, textColor: .blue)
-                        }) 
+                            Button(action: {}) {
+                                HStack {
+                                    Image(systemName: "person")
+                                    Text("Add Player")
+                                }
+                            }.font(.system(size: 21, weight: .heavy, design: .default))
+                        })
                     ForEach(extraPlayers) { aPlayer in
                         NavigationLink(
                             destination: AddAndEditPlayerView(),
@@ -35,14 +41,16 @@ struct PlayersList: View {
                     }
                 }
 
-            }.listStyle(GroupedListStyle())
+            }
+            .listStyle(GroupedListStyle())
             .navigationBarTitle(Text("NBA Finals Players"), displayMode: .large)
+            .accentColor(Color(.label))
         }
     }
 }
 
 struct PlayersList_Previews: PreviewProvider {
     static var previews: some View {
-        PlayersList().previewDevice("iPhone 8 Plus").previewDisplayName("iPhone 8 Plus")
+        PlayersList().preferredColorScheme(.dark).previewDevice("iPhone 8 Plus").previewDisplayName("iPhone 8 Plus")
     }
 }

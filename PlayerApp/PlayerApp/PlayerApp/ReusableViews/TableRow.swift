@@ -18,7 +18,7 @@ struct TableRow: View {
                 .clipShape(Circle())
                 .background(Circle())
             
-            TextView(value: player.name, fontSize: 21, fontWeight: .medium, textColor: .black)
+            TextView(value: player.name, fontSize: 21, fontWeight: .medium, textColor: Color(.label))
             
             Spacer()
         })

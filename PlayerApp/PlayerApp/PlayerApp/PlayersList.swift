@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct PlayersList: View {
-            
+    
+    @ObservedObject var playerStore = PlayerStore()
+
     var body: some View {
         NavigationView {
             List {
-                Section(header: Text("NBA Extra Players")) {
+                
+                // New Players Section
+                Section(header: Text("Nominated Players")) {
                     NavigationLink(
-                        destination: AddAndEditPlayerView(),
+                        destination: AddAndEditPlayerView(player: Player(), playerStore: playerStore, isNewPlayer: true),
                         label: {
                             Button(action: {}) {
                                 HStack {
@@ -23,14 +27,27 @@ struct PlayersList: View {
                                 }
                             }.font(.system(size: 21, weight: .heavy, design: .default))
                         })
+                    ForEach(playerStore.newPlayers) { player in
+                        NavigationLink(
+                            destination: AddAndEditPlayerView(player: player, playerStore: playerStore, isNewPlayer: false),
+                            label: {
+                                TableRow(player: player)
+                            })
+                    }
+                }
+                
+                // Extra Players Section
+                Section(header: Text("NBA Extra Players")) {
                     ForEach(extraPlayers) { aPlayer in
                         NavigationLink(
-                            destination: AddAndEditPlayerView(),
+                            destination: AddAndEditPlayerView(player: Player(), playerStore: playerStore, isNewPlayer: false),
                             label: {
                                 TableRow(player: aPlayer)
                             })
                     }
                 }
+                
+                // Final Players Section
                 Section(header: Text("NBA Final Players")) {
                     ForEach(players) { player in
                         NavigationLink(

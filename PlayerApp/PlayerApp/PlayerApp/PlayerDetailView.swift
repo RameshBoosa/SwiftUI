@@ -9,8 +9,8 @@ import SwiftUI
 
 struct PlayerDetailView: View {
     
-    var player: Player
-    
+    @State var player: Player
+        
     var body: some View {
         VStack {
             BannerImageView(imageName: player.team.imageName, imageWidth: UIScreen.main.bounds.width, imageHeight: 300)

@@ -58,7 +58,7 @@ let extraPlayers = [
 
 let teams = Dictionary(grouping: extraPlayers) { $0.team.name }
 
-class PlayerStore : ObservableObject {
+class PlayerStore : ObservableObject { // Binable objects should ba class not an objects
     let objectWillChange = PassthroughSubject<Void, Never>()
     
     var newPlayers: [Player] {
@@ -68,14 +68,14 @@ class PlayerStore : ObservableObject {
     }
     
     init() {
-        let player1 = Player(name: "Ramesh Boosa", imageName: "hunder", team: hawks, age: 25, height: "5'9\"", weight: 200, rating: 2, isSelected: true)
-        let player2 = Player(name: "Ramesh Naidu", imageName: "hunder", team: hawks, age: 26, height: "6'9\"", weight: 220, rating: 3, isSelected: false)
+        let player1 = Player(name: "Ramesh Boosa", imageName: "hunder", age: 25, rating: 2, isSelected: true)
+        let player2 = Player(name: "Ramesh Naidu", imageName: "hunder", age: 26, rating: 3, isSelected: false)
 
         newPlayers = [player1, player2]
     }
     
     func addPlayerToList(player: Player) {
-        newPlayers.append(player)
+        newPlayers.insert(player, at: 0)
     }
 }
 

@@ -11,7 +11,7 @@ import SwiftUI
 struct PlayerAppApp: App {
     var body: some Scene {
         WindowGroup {
-            PlayersList()
+            PlayersList().environmentObject(PlayerStore())
         }
     }
 }

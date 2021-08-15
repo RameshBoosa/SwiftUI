@@ -9,7 +9,10 @@ import SwiftUI
 
 struct PlayersList: View {
     
-    @ObservedObject var playerStore = PlayerStore()
+  //  @ObservedObject var playerStore = PlayerStore() // Manages Data but we have to pass it from view to view
+    @EnvironmentObject var playerStore: PlayerStore
+    
+   // @EnvironmentObject : we can grab it any where in target and we don't have to pass it from one to one like @ObservedObject
 
     var body: some View {
         NavigationView {
@@ -18,7 +21,7 @@ struct PlayersList: View {
                 // New Players Section
                 Section(header: Text("Nominated Players")) {
                     NavigationLink(
-                        destination: AddAndEditPlayerView(player: Player(), playerStore: playerStore, isNewPlayer: true),
+                        destination: AddAndEditPlayerView(player: Player(), isNewPlayer: true),
                         label: {
                             Button(action: {}) {
                                 HStack {
@@ -29,7 +32,7 @@ struct PlayersList: View {
                         })
                     ForEach(playerStore.newPlayers) { player in
                         NavigationLink(
-                            destination: AddAndEditPlayerView(player: player, playerStore: playerStore, isNewPlayer: false),
+                            destination: AddAndEditPlayerView(player: player, isNewPlayer: false),
                             label: {
                                 TableRow(player: player)
                             })
@@ -40,7 +43,7 @@ struct PlayersList: View {
                 Section(header: Text("NBA Extra Players")) {
                     ForEach(extraPlayers) { aPlayer in
                         NavigationLink(
-                            destination: AddAndEditPlayerView(player: Player(), playerStore: playerStore, isNewPlayer: false),
+                            destination: AddAndEditPlayerView(player: Player(), isNewPlayer: false),
                             label: {
                                 TableRow(player: aPlayer)
                             })

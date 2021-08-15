@@ -14,7 +14,8 @@ struct AddAndEditPlayerView: View {
     @State var isSelected = false
     
     @State var player: Player
-    @ObservedObject var playerStore: PlayerStore
+   // @ObservedObject var playerStore: PlayerStore
+    @EnvironmentObject var playerStore: PlayerStore
     @Environment(\.presentationMode) var presentationMode//: Binding<PresentationMode>
     var isNewPlayer: Bool
     
@@ -59,6 +60,7 @@ struct AddAndEditPlayerView: View {
                     HStack {
                         Spacer()
                         Button("Save") {
+                            self.player.imageName = "hunder"
                             self.playerStore.addPlayerToList(player: self.player)
                             self.presentationMode.wrappedValue.dismiss()
                             
@@ -74,6 +76,6 @@ struct AddAndEditPlayerView: View {
 
 struct AddAndEditPlayerView_Previews: PreviewProvider {
     static var previews: some View {
-        AddAndEditPlayerView(player: Player(), playerStore: PlayerStore(), isNewPlayer: true).previewDevice("iPhone 8 Plus").previewDisplayName("iPhone 8 Plus")
+        AddAndEditPlayerView(player: Player(), isNewPlayer: true).previewDevice("iPhone 8 Plus").previewDisplayName("iPhone 8 Plus")
     }
 }
